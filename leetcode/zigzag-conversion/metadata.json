@@ -1,0 +1,24 @@
+{
+  "submissionId": "69fb4a7bf42561b213aad8a6",
+  "user": {
+    "username": "himanshu"
+  },
+  "problem": {
+    "title": "Zigzag Conversion",
+    "slug": "zigzag-conversion",
+    "difficulty": "Medium",
+    "platform": "leetcode"
+  },
+  "solution": {
+    "language": "cpp",
+    "repositoryPath": "hgautam2010/my-codes",
+    "solutionPath": "leetcode/zigzag-conversion/solution.cpp",
+    "readmePath": "leetcode/zigzag-conversion/README.md",
+    "metadataPath": "leetcode/zigzag-conversion/metadata.json"
+  },
+  "links": {
+    "problemUrl": "https://prepiora.com/problems/zigzag-conversion",
+    "profileUrl": "https://prepiora.com/u/himanshu"
+  },
+  "solvedAt": "2026-05-06T14:04:42.989Z"
+}
