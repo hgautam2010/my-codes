@@ -4,25 +4,23 @@ Solved by @himanshu
 
 - Platform: leetcode
 - Difficulty: Medium
-- Language: cpp
-- Solved at: 2026-05-06T14:04:42.989Z
+- Language: python3
+- Solved at: 2026-05-06T14:30:26.459Z
 - Prepiora problem: https://prepiora.com/problems/zigzag-conversion
 - Prepiora profile: https://prepiora.com/u/himanshu
 
 ## Approach
 
-The solution simulates the zigzag pattern by maintaining an array of strings for each row and iterating through the characters while switching the direction of traversal when the first or last row is reached.
+The solution simulates the zigzag pattern by iterating through the input string and concatenating characters to the appropriate row strings, then joins all rows to form the final output.
 
 ## Complexity
 
-- Time: O(n) where n is the length of the input string, since each character is processed once.
-- Space: O(n) due to the storage of characters in multiple row strings adding up to the length of the input string.
+- Time: O(n), where n is the length of the input string, as it iterates over the string once.
+- Space: O(n), as it stores the characters of the string in an array of strings equal to the number of rows.
 
 ## Signals
 
-- simulation
-- string manipulation
-- zigzag traversal
-- control flow
-- string concatenation
-- array usage
+- Zigzag Pattern Simulation
+- String Manipulation
+- Simulation
+- Pattern Recognition
