@@ -3,15 +3,15 @@
 Solved by @himanshu
 
 - Platform: geeksforgeeks
-- Difficulty: Medium
+- Difficulty: Easy
 - Language: cpp
-- Solved at: 2026-06-12T19:40:47.682Z
+- Solved at: 2026-06-13T10:19:13.148Z
 - Preptin problem: https://preptin.ai/problems/print-alternate-elements-of-an-array
 - Preptin profile: https://preptin.ai/u/himanshu
 
 ## Approach
 
-Iterate through the input array and collect elements at even indices into a result vector.
+Iterate over the input array and collect elements at even indices into a result array.
 
 ## Complexity
 
@@ -20,8 +20,7 @@ Iterate through the input array and collect elements at even indices into a resu
 
 ## Signals
 
-- Array Traversal
-- Index Filtering
-- Array Indexing
 - Iteration
-- Conditional Selection
+- Index Filtering
+- Array Manipulation
+- Indexing
