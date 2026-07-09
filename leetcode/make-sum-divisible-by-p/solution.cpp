@@ -3,11 +3,13 @@ public:
     int minSubarray(vector<int>& nums, int p) {
         long sum = 0;
 
-        for (auto x : nums) sum += x;
+        for (auto x : nums)
+            sum += x;
 
         sum = sum % p;
 
-        if (sum == 0) return 0;
+        if (sum == 0)
+            return 0;
 
         map<long, long> mp;
 
@@ -20,13 +22,14 @@ public:
 
         for (long i = 1; i < n; i++) {
             nums[i] = (nums[i - 1] + nums[i]) % p;
-            mp[nums[i]] = i;
 
             long lookfor = (p + nums[i] - sum) % p;
 
             if (mp.find(lookfor) != mp.end()) {
                 ans = min(ans, i - mp[lookfor]);
             }
+
+            mp[nums[i]] = i;
         }
 
         return ans == n ? -1 : ans;
