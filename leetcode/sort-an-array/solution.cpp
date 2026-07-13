@@ -1,38 +1,30 @@
 class Solution {
 public:
-    int part(vector<int>& nums, int low, int high) {
-        int p = low + rand() % (high - low);
-
-        swap(nums[p], nums[high]);
-        p = high;
-        high -= 1;
-
-        while (low <= high) {
-            while (low <= high && nums[low] <= nums[p]) {
-                low++;
-            }
-            while (low <= high && nums[high] > nums[p]) {
-                high--;
-            }
-            if (low < high) {
-                swap(nums[low], nums[high]);
-                low++;
-                high--;
-            }
-        }
-
-        swap(nums[low], nums[p]);
-        return low;
-
-    }
-
     void sortIt(vector<int>& nums, int low, int high) {
         if (low >= high) return;
 
-        int p = part(nums, low, high);
+        int p = nums[low + rand() % (high - low)];
 
-        sortIt(nums, low, p - 1);
-        sortIt(nums, p + 1, high);
+        int small, current, large;
+
+        small = current = low;
+        large = high;
+
+        while (current <= large) {
+            if (nums[current] < p) {
+                swap(nums[small], nums[current]);
+                current++;
+                small++;
+            } else if (nums[current] > p) {
+                swap(nums[large], nums[current]);
+                large--;
+            } else {
+                current++;
+            }
+        }
+
+        sortIt(nums, low, small - 1);
+        sortIt(nums, large + 1, high);
     }
 
     vector<int> sortArray(vector<int>& nums) {
