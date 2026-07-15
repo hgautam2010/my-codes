@@ -4,7 +4,7 @@ public:
 
     int solve(vector<vector<vector<int>>>& dp, vector<int>& nums, int i, int first, int second) {
         if (i == nums.size()) {
-            return (first == second && first != 0 && second != 0);
+            return first == second && first != 0 && second != 0;
         }
 
         if (dp[i][first][second] != -1) {
