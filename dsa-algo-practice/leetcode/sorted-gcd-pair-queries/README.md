@@ -5,27 +5,29 @@ Solved by @hx9sk4lhew
 - Platform: leetcode
 - Difficulty: Medium
 - Language: cpp
-- Solved at: 2026-07-18T19:39:46.079Z
+- Solved at: 2026-07-18T19:41:02.982Z
 - Preptin problem: https://preptin.ai/problems/sorted-gcd-pair-queries
 - Preptin profile: https://preptin.ai/u/hx9sk4lhew
 
 ## Approach
 
-The solution calculates the frequency of divisors for all numbers in the input array, then uses an inclusion-exclusion principle to count pairs of elements with each possible gcd. It creates a prefix sum array of these pairs to answer multiple queries via binary search efficiently.
+The solution uses a frequency array to count how many times each divisor appears in the nums array, then uses inclusion-exclusion (Mobius inversion principle) to compute the number of pairs with each gcd value. It constructs a prefix sum array of pairs sorted by gcd and uses binary search to answer gcd queries efficiently.
 
 ## Complexity
 
-- Time: O(n * sqrt(max(nums))) for divisor counting + O(max(nums) log max(nums)) for inclusion-exclusion + O(q log max(nums)) for queries, where n is the size of nums and q is the number of queries.
-- Space: O(max(nums)) for divisor frequency arrays and prefix sums.
+- Time: O(n * sqrt(max(nums)) + max(nums) * log(max(nums)) + q * log(max(nums))) where n is size of nums and q is number of queries.
+- Space: O(max(nums)) for frequency arrays and prefix sums.
 
 ## Signals
 
-- Prefix Sum
 - Binary Search
+- Prefix Sum
+- Mathematics
 - Number Theory
-- Greatest Common Divisor
-- Inclusion-Exclusion Principle
+- Mobius Inversion
+- Divisor Counting
+- Greatest Common Divisor (GCD)
+- Counting Pairs
 - Divisor Frequency
-- GCD Computation
-- Prefix Sums
-- Inclusion-Exclusion
+- Inclusion-Exclusion Principle
+- Binary Search on Prefix Sums
